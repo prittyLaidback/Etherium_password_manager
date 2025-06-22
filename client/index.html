@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Password Manager</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ethereum Password Manager</h1>
+        
+        <div id="wallet-section">
+            <button id="connect-wallet">Connect Wallet</button>
+            <p id="wallet-address"></p>
+        </div>
+        
+        <div id="password-form" style="display:none;">
+            <h2>Add New Password</h2>
+            <input type="text" id="website" placeholder="Website">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <input type="password" id="master-password" placeholder="Master Password">
+            <button id="save-password">Save Password</button>
+        </div>
+        
+        <div id="passwords-list">
+            <h2>Your Passwords</h2>
+            <div id="passwords-container"></div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
